@@ -4,10 +4,10 @@ function createTable(rows, cols) {
   for (let i = 1; i <= rows; i++) {
     // const row = table.insertRow();
     const row = document.createElement("tr");
-    for (let j = 1; j <= cols; j++) {
+    for (let a = 1; a <= cols; a++) {
       // const cell = row.insertCell();
       const cell = document.createElement("td");
-      cell.textContent = i * j;
+      cell.textContent = i * a;
       row.appendChild(cell);
     }
     table.appendChild(row);

@@ -1,10 +1,13 @@
-const textBlock = document.getElementById("text");
-const button = document.getElementById("btnButton");
+function randomImg() {
+  const imageContainer = document.getElementById("randomImage");
+  const randomIndex = Math.floor(Math.random() * 9) + 1;
+  imageContainer.src = `img/${randomIndex}.jpg`;
+}
 
-button.onclick = function () {
-  if (textBlock.style.color === "black") {
-    textBlock.style.color = "red";
-  } else {
-    textBlock.style.color = "black";
-  }
+document.getElementById("loadImageButton").onclick = function () {
+  randomImg();
+};
+
+window.onload = function () {
+  randomImg();
 };
